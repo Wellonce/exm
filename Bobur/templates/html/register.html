@@ -1,0 +1,11 @@
+{% extends 'html/base.html' %}
+{% block title %} User Register Page{% endblock %}
+{% block body %}
+    <h1>Registration Page</h1>
+    <h3>Already have an account? Please press <a href="{% url 'Bobur:login-page' %}">here </a></h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Register</button>
+    </form>
+{% endblock %}

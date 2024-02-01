@@ -1,0 +1,15 @@
+{% extends 'html/base.html' %}
+{% block title %} Login Page{% endblock %}
+
+{% block body %}
+    <h1>User Login Form</h1>
+
+    <h3>Don't you have an account? Click <a href="{% url 'Bobur:register-page' %}">here </a></h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+    <button type="submit">Submit</button>
+    </form>
+
+    {% endblock %}
